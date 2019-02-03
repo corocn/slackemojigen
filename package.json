@@ -17,6 +17,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
     "nuxt-ts": "^2.4.2",
+    "nuxt-webfontloader": "^1.0.0",
     "vue-property-decorator": "^7.3.0"
   },
   "devDependencies": {
