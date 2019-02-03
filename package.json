@@ -1,0 +1,52 @@
+{
+  "name": "emojigen",
+  "version": "1.0.0",
+  "description": "My stellar Nuxt.js project",
+  "author": "corocn",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "nuxt-ts": "^2.4.2",
+    "vue-property-decorator": "^7.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "@types/autoprefixer": "^9.1.1",
+    "@types/babel-core": "6.25.5",
+    "@types/eslint": "^4.16.6",
+    "@types/eslint-plugin-prettier": "2.2.0",
+    "@types/jest": "^23.3.13",
+    "@types/prettier": "1.15.2",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "autoprefixer": "^9.4.7",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": ">=2.16.0",
+    "eslint-plugin-jest": ">=22.2.2",
+    "eslint-plugin-node": ">=8.0.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "jest": "^24.0.0",
+    "nodemon": "^1.18.9",
+    "prettier": "1.16.3",
+    "tailwindcss": "^0.7.4",
+    "vue-jest": "^3.0.2"
+  }
+}
