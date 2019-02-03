@@ -4,6 +4,8 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "allowJs": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
     "types": [
       "@types/node",
       "@nuxt/vue-app"

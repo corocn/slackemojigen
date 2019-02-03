@@ -1,20 +1,25 @@
 <template>
   <section class="container">
     <div>
-      <Logo />
-      <HelloWorld />
+      <EmojiView :text="text" :size="size" font-family="M PLUS Rounded 1c" />
+      <textarea v-model="text" />
+      <input v-model="size" type="number" />
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import HelloWorld from '~/components/HelloWorld.vue'
+import EmojiView from '~/components/EmojiView.vue'
 
 export default {
   components: {
-    Logo,
-    HelloWorld
+    EmojiView
+  },
+  data() {
+    return {
+      text: 'ああああ',
+      size: '100'
+    }
   }
 }
 </script>
