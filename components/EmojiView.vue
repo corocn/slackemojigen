@@ -31,7 +31,7 @@ export default class EmojiView extends Vue {
       this.ctx.textBaseline = 'top'
       this.ctx.textAlign = 'left'
 
-      this.ctx.fillStyle = 'rgb(192, 80, 77)'
+      this.ctx.fillStyle = 'rgb(255, 165, 0)'
       this.ctx.font = `bold ${size}px '${this.fontFamily}'`
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)

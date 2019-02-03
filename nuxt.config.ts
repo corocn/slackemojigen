@@ -18,9 +18,23 @@ module.exports = {
 
   webfontloader: {
     google: {
-      families: ['M+PLUS+Rounded+1c']
+      families: [
+        'Kosugi',
+        'Kosugi+Maru',
+        'M+PLUS+1p',
+        'M+PLUS+Rounded+1c',
+        'Noto+Sans+JP',
+        'Noto+Sans+SC',
+        'Noto+Sans+TC',
+        'Noto+Serif+JP',
+        'Noto+Serif+SC',
+        'Noto+Serif+TC',
+        'Sawarabi+Gothic',
+        'Sawarabi+Mincho'
+      ]
     }
   },
+
 
   /*
    ** Customize the progress-bar color
@@ -59,16 +73,16 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    // extend(config, ctx) {
+    //   // Run ESLint on save
+    //   if (ctx.isDev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/
+    //     })
+    //   }
+    // }
   }
 }
