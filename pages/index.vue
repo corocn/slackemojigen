@@ -9,14 +9,11 @@
       </no-ssr>
     </div>
     <div class="font-container">
-      <div v-for="font in fonts" v-bind:key="font" class="box">
-        <div>
-          <span class="font-name">{{ font }}</span>
-        </div>
-        <EmojiView
+      <div v-for="family in fontFamilies" v-bind:key="family" class="box">
+        <emoji-view
           :text="text"
           :size="size"
-          :font-family="font"
+          :family="family"
           :color="colors.rgba"
         />
       </div>
@@ -25,7 +22,7 @@
 </template>
 
 <script>
-import EmojiView from '~/components/EmojiView.vue'
+import EmojiView from '~/components/EmojiView'
 import { Sketch } from 'vue-color'
 
 export default {
@@ -38,7 +35,7 @@ export default {
       text: 'すご\nーい',
       size: '100',
       colors: { rgba: { r: 245, g: 166, b: 35, a: 1 } },
-      fonts: [
+      fontFamilies: [
         'Noto Serif SC',
         'Noto Sans JP',
         'Noto Sans TC',

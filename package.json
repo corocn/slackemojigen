@@ -15,8 +15,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/free-solid-svg-icons": "^5.7.1",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
+    "nuxt-fontawesome": "^0.4.0",
     "nuxt-ts": "^2.4.2",
     "nuxt-webfontloader": "^1.0.0",
     "vue-color": "^2.7.0",
