@@ -8,11 +8,6 @@
         <textarea v-model="text" />
       </div>
 
-      <div class="mt-2">
-        <h2 class="text-lg">Size</h2>
-        <input v-model="size" type="number" />
-      </div>
-
       <div>
         <h2 class="text-lg mt-2">Color</h2>
         <no-ssr placeholder="Picker Loading...">
@@ -22,12 +17,7 @@
     </div>
     <div class="emoji-display flex flex-row flex-wrap">
       <div v-for="family in fontFamilies" v-bind:key="family" class="p-6">
-        <emoji-view
-          :text="text"
-          :size="size"
-          :family="family"
-          :color="colors.rgba"
-        />
+        <emoji-view :text="text" :family="family" :color="colors.rgba" />
       </div>
     </div>
   </section>
@@ -44,8 +34,7 @@ export default {
   },
   asyncData() {
     return {
-      text: 'やみ\nのま',
-      size: '100',
+      text: 'えも\nじ',
       colors: { rgba: { r: 0, g: 0, b: 0, a: 1 } },
       fontFamilies: [
         'Noto Serif SC',

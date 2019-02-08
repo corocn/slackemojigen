@@ -18,7 +18,7 @@ export default class EmojiCanvas extends Vue {
   @Prop({ type: Object })
   color!: any
 
-  @Prop({ type: String })
+  @Prop({ type: Number })
   size!: number
 
   @Prop({ type: String })

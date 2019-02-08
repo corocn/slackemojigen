@@ -12,7 +12,7 @@
       <emoji-canvas
         class="s128"
         :text="text"
-        :size="size"
+        :size="calculatedSize"
         :family="family"
         :color="color"
         :view-size="128"
@@ -21,7 +21,7 @@
       <emoji-canvas
         class="s64"
         :text="text"
-        :size="size"
+        :size="calculatedSize"
         :family="family"
         :color="color"
         :view-size="64"
@@ -29,7 +29,7 @@
       <emoji-canvas
         class="s32"
         :text="text"
-        :size="size"
+        :size="calculatedSize"
         :family="family"
         :color="color"
         :view-size="32"
@@ -37,7 +37,7 @@
       <emoji-canvas
         class="s16"
         :text="text"
-        :size="size"
+        :size="calculatedSize"
         :family="family"
         :color="color"
         :view-size="16"
@@ -57,9 +57,6 @@ export default class EmojiView extends Vue {
   @Prop({ type: String })
   text!: string
 
-  @Prop({ type: String })
-  size!: string
-
   @Prop({ type: Object })
   color!: any
 
@@ -68,6 +65,13 @@ export default class EmojiView extends Vue {
 
   onClickDownload() {
     ;(this.$refs.canvas as EmojiCanvas).download()
+  }
+
+  get calculatedSize() {
+    if (this.text.length === 1) {
+      return 200
+    }
+    return 100
   }
 }
 </script>
