@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
+import download from 'downloadjs'
 
 @Component
 export default class EmojiCanvas extends Vue {
@@ -52,6 +53,16 @@ export default class EmojiCanvas extends Vue {
         }
       })
     }
+  }
+
+  download(): void {
+    if (!this.text) {
+      return
+    }
+
+    const img = (this.$el as HTMLCanvasElement).toDataURL('image/png')
+    const filename = `${this.text.replace(/\s+/g, '')}.png`
+    download(img, filename)
   }
 
   @Watch('text')

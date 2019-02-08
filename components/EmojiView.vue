@@ -2,7 +2,11 @@
   <div class="wrapper mt-3 border-gray-lighter border-t border-solid p-2">
     <div class="emoji-view-header flex justify-between">
       <span class="font-name">{{ family }}</span>
-      <fa icon="arrow-circle-down" class="text-black" />
+      <fa
+        icon="arrow-circle-down"
+        class="text-black cursor-pointer"
+        @click="onClickDownload"
+      />
     </div>
     <div class="emoji-view-body mt-3">
       <emoji-canvas
@@ -12,6 +16,7 @@
         :family="family"
         :color="color"
         :view-size="128"
+        ref="canvas"
       ></emoji-canvas>
       <emoji-canvas
         class="s64"
@@ -60,6 +65,10 @@ export default class EmojiView extends Vue {
 
   @Prop({ type: String })
   family!: string
+
+  onClickDownload() {
+    ;(this.$refs.canvas as EmojiCanvas).download()
+  }
 }
 </script>
 
