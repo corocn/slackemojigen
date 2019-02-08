@@ -84,5 +84,10 @@ module.exports = {
     //     })
     //   }
     // }
+    // extend(config, ctx) {
+    //   if (ctx.isClient) {
+    //     config.devtool = 'cheap-module-eval-source-map'
+    //   }
+    // }
   }
 }

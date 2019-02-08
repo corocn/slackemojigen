@@ -1,5 +1,5 @@
 <template>
-  <canvas width="200" height="200" class="canvas" :memo="text + fontFamily" />
+  <canvas width="200" height="200" :memo="text + fontFamily" />
 </template>
 
 <script lang="ts">
@@ -12,6 +12,9 @@ export default class EmojiView extends Vue {
 
   @Prop({ type: String })
   size!: string
+
+  @Prop({ type: Object })
+  color!: any
 
   @Prop({ type: String })
   fontFamily!: string
@@ -31,7 +34,8 @@ export default class EmojiView extends Vue {
       this.ctx.textBaseline = 'top'
       this.ctx.textAlign = 'left'
 
-      this.ctx.fillStyle = 'rgb(255, 165, 0)'
+      const { r, g, b, a } = this.color || { r: 0, g: 0, b: 0, a: 1 }
+      this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`
       this.ctx.font = `bold ${size}px '${this.fontFamily}'`
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
@@ -56,6 +60,11 @@ export default class EmojiView extends Vue {
     this.draw()
   }
 
+  @Watch('color')
+  onColorChange(): void {
+    this.draw()
+  }
+
   @Watch('fontFamily')
   onFontFamilyChange(): void {
     this.draw()
@@ -65,6 +74,7 @@ export default class EmojiView extends Vue {
 
 <style scoped>
 canvas {
-  border: 1px dotted lightgray;
+  width: 100px;
+  height: 100px;
 }
 </style>
