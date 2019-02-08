@@ -44,8 +44,6 @@ export default class EmojiCanvas extends Vue {
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
 
-      this.ctx.fillText(this.text, 0, 0)
-
       const lines: Array<string> = this.text.split('\n')
 
       lines.map((value: string, index) => {
