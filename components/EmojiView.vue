@@ -44,7 +44,7 @@
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="16"
+        :view-size="18"
       ></emoji-canvas>
     </div>
   </div>
@@ -85,7 +85,7 @@ export default class EmojiView extends Vue {
 
 <style scoped>
 .wrapper {
-  width: 274px;
+  width: 300px;
 }
 
 .s64 {
