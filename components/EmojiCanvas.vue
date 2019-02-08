@@ -24,6 +24,9 @@ export default class EmojiCanvas extends Vue {
   @Prop({ type: String })
   family!: string
 
+  @Prop({ type: String })
+  weight!: string
+
   @Prop({ type: Number })
   viewSize!: number
 
@@ -41,7 +44,7 @@ export default class EmojiCanvas extends Vue {
       this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`
       this.ctx.textAlign = 'left'
       this.ctx.textBaseline = 'top'
-      this.ctx.font = `bold ${this.size}px '${this.family}'`
+      this.ctx.font = `${this.weight} ${this.size}px '${this.family}'`
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
 
@@ -82,6 +85,11 @@ export default class EmojiCanvas extends Vue {
 
   @Watch('size')
   onSizeChange(): void {
+    this.draw()
+  }
+
+  @Watch('weight')
+  onWeightChange(): void {
     this.draw()
   }
 

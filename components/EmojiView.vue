@@ -15,6 +15,7 @@
         :size="calculatedSize"
         :family="family"
         :color="color"
+        :weight="weight"
         :view-size="128"
         ref="canvas"
       ></emoji-canvas>
@@ -24,6 +25,7 @@
         :size="calculatedSize"
         :family="family"
         :color="color"
+        :weight="weight"
         :view-size="64"
       ></emoji-canvas>
       <emoji-canvas
@@ -32,6 +34,7 @@
         :size="calculatedSize"
         :family="family"
         :color="color"
+        :weight="weight"
         :view-size="32"
       ></emoji-canvas>
       <emoji-canvas
@@ -40,6 +43,7 @@
         :size="calculatedSize"
         :family="family"
         :color="color"
+        :weight="weight"
         :view-size="16"
       ></emoji-canvas>
     </div>
@@ -62,6 +66,9 @@ export default class EmojiView extends Vue {
 
   @Prop({ type: String })
   family!: string
+
+  @Prop({ type: String })
+  weight!: string
 
   onClickDownload() {
     ;(this.$refs.canvas as EmojiCanvas).download()
