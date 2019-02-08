@@ -35,7 +35,11 @@ export default class EmojiCanvas extends Vue {
   mounted(): void {
     const el = this.$el as HTMLCanvasElement
     this.ctx = el.getContext('2d')
-    this.draw()
+
+    // TODO: 初回ロード時にうまく描画されない。もっときれいに実装できないかな。
+    setTimeout(() => {
+      this.draw()
+    }, 1000)
   }
 
   draw(): void {
