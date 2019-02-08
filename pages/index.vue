@@ -1,15 +1,27 @@
 <template>
-  <section class="container">
-    Slack絵文字ジェネレーター
-    <div>
-      <textarea v-model="text" />
-      <input v-model="size" type="number" />
-      <no-ssr placeholder="Picker Loading...">
-        <sketch v-model="colors" />
-      </no-ssr>
+  <section class="container flex m-4">
+    <div class="emoji-controller mt-8">
+      <h1 class="text-5xl">Slack<br />Emoji<br />Generator</h1>
+
+      <div class="mt-2">
+        <h2 class="text-lg">Text</h2>
+        <textarea v-model="text" />
+      </div>
+
+      <div class="mt-2">
+        <h2 class="text-lg">Size</h2>
+        <input v-model="size" type="number" />
+      </div>
+
+      <div>
+        <h2 class="text-lg mt-2">Color</h2>
+        <no-ssr placeholder="Picker Loading...">
+          <sketch v-model="colors" />
+        </no-ssr>
+      </div>
     </div>
-    <div class="font-container">
-      <div v-for="family in fontFamilies" v-bind:key="family" class="box">
+    <div class="emoji-display flex flex-row flex-wrap">
+      <div v-for="family in fontFamilies" v-bind:key="family" class="p-6">
         <emoji-view
           :text="text"
           :size="size"
@@ -32,9 +44,9 @@ export default {
   },
   asyncData() {
     return {
-      text: 'すご\nーい',
+      text: 'やみ\nのま',
       size: '100',
-      colors: { rgba: { r: 245, g: 166, b: 35, a: 1 } },
+      colors: { rgba: { r: 0, g: 0, b: 0, a: 1 } },
       fontFamilies: [
         'Noto Serif SC',
         'Noto Sans JP',
@@ -56,12 +68,11 @@ export default {
 </script>
 
 <style scoped>
-.font-container {
-  display: flex;
-  flex-flow: row wrap;
+.emoji-controller {
+  width: 300px;
 }
 
-.box {
-  padding: 20px;
+.emoji-display {
+  max-width: 1500px;
 }
 </style>

@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <span class="font-name">{{ family }}</span>
-    <div class="wrapper">
+  <div class="wrapper mt-3 border-gray-lighter border-t border-solid p-2">
+    <div class="emoji-view-header flex justify-between">
+      <span class="font-name">{{ family }}</span>
+      <fa icon="arrow-circle-down" class="text-black" />
+    </div>
+    <div class="emoji-view-body mt-3">
       <emoji-canvas
-        class="big"
+        class="s128"
         :text="text"
         :size="size"
         :family="family"
@@ -11,24 +14,29 @@
         :view-size="128"
       ></emoji-canvas>
       <emoji-canvas
-        class="slack"
+        class="s64"
         :text="text"
         :size="size"
         :family="family"
         :color="color"
-        :view-size="48"
+        :view-size="64"
       ></emoji-canvas>
       <emoji-canvas
-        class="slack-reaction"
+        class="s32"
         :text="text"
         :size="size"
         :family="family"
         :color="color"
-        :view-size="20"
+        :view-size="32"
       ></emoji-canvas>
-      <div class="download">
-        <fa icon="download" class="text-black" />
-      </div>
+      <emoji-canvas
+        class="s16"
+        :text="text"
+        :size="size"
+        :family="family"
+        :color="color"
+        :view-size="16"
+      ></emoji-canvas>
     </div>
   </div>
 </template>
@@ -57,31 +65,16 @@ export default class EmojiView extends Vue {
 
 <style scoped>
 .wrapper {
-  display: grid;
-  grid-template-columns: 128px 48px;
-  grid-auto-rows: 58px 26px 44px;
+  width: 274px;
 }
 
-.big {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+.s64 {
+  margin-bottom: 1px;
 }
-
-.slack {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  margin: 5px;
+.s32 {
+  margin-bottom: 2px;
 }
-
-.slack-reaction {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  margin: 5px;
-}
-
-.download {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  margin: 5px;
+.s16 {
+  margin-bottom: 3px;
 }
 </style>

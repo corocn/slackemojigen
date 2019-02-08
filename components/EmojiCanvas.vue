@@ -36,20 +36,21 @@ export default class EmojiCanvas extends Vue {
 
   draw(): void {
     if (this.ctx) {
-      this.ctx.textBaseline = 'top'
-      this.ctx.textAlign = 'left'
-
       const { r, g, b, a } = this.color || { r: 0, g: 0, b: 0, a: 1 }
       this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`
+      this.ctx.textAlign = 'left'
+      this.ctx.textBaseline = 'top'
       this.ctx.font = `bold ${this.size}px '${this.family}'`
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
+
+      this.ctx.fillText(this.text, 0, 0)
 
       const lines: Array<string> = this.text.split('\n')
 
       lines.map((value: string, index) => {
         if (this.ctx) {
-          this.ctx.fillText(value, 0, index * this.size)
+          this.ctx.fillText(value, 0, index * 100, 200)
         }
       })
     }
