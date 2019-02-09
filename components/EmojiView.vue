@@ -3,7 +3,7 @@
     <div class="emoji-view-header flex justify-between">
       <span class="font-name">{{ family }}</span>
       <fa
-        icon="arrow-circle-down"
+        icon="download"
         class="text-black cursor-pointer"
         @click="onClickDownload"
       />

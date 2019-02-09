@@ -4,6 +4,19 @@
       <h1 class="text-5xl">Slack<br />Emoji<br />Generator</h1>
 
       <div class="mt-2">
+        <h2 class="text-lg mb-2">Preset</h2>
+
+        <li v-for="preset in presets" :key="preset.text">
+          <preset-button
+            :text="preset.text"
+            :color="preset.color"
+            :weight="preset.weight"
+            v-on:click="onClickPreset"
+          ></preset-button>
+        </li>
+      </div>
+
+      <div class="mt-2">
         <h2 class="text-lg mb-2">Text</h2>
         <textarea v-model="text" class="border rounded w-1/2 h-16" />
       </div>
@@ -47,15 +60,17 @@
 <script>
 import EmojiView from '~/components/EmojiView'
 import { Sketch } from 'vue-color'
+import PresetButton from '../components/PresetButton'
 
 export default {
   components: {
+    PresetButton,
     EmojiView,
     Sketch
   },
   asyncData() {
     return {
-      text: 'あ',
+      text: 'えも\nじ',
       weight: 'normal',
       colors: { rgba: { r: 0, g: 0, b: 0, a: 1 } },
       fontFamilies: [
@@ -71,12 +86,34 @@ export default {
         'Noto Serif JP',
         'M PLUS Rounded 1c',
         'Kosugi'
+      ],
+      presets: [
+        {
+          text: 'おつ\nかれ',
+          weight: 'bold',
+          color: { r: 255, g: 0, b: 0, a: 1 }
+        },
+        {
+          text: 'すご\nーい',
+          weight: 'bold',
+          color: { r: 255, g: 146, b: 0, a: 1 }
+        },
+        {
+          text: '神',
+          weight: 'bold',
+          color: { r: 0, g: 0, b: 0, a: 1 }
+        }
       ]
     }
   },
   methods: {
     setWeight(value) {
       this.weight = value
+    },
+    onClickPreset(preset) {
+      this.text = preset.text
+      this.weight = preset.weight
+      this.colors.rgba = preset.color
     }
   }
 }

@@ -2,7 +2,12 @@
   <canvas
     width="200"
     height="200"
-    v-bind:style="{ width: viewSize + 'px', height: viewSize + 'px' }"
+    v-bind:style="{
+      width: viewSize + 'px',
+      height: viewSize + 'px',
+      fontKerning: 'normal',
+      textRendering: 'optimizeLegibility'
+    }"
   />
 </template>
 
@@ -56,6 +61,7 @@ export default class EmojiCanvas extends Vue {
 
       lines.map((value: string, index) => {
         if (this.ctx) {
+          console.log('render!!')
           this.ctx.fillText(value, 0, index * 100, 200)
         }
       })
