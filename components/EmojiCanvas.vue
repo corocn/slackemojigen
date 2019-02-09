@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
+import FontFaceObserver from 'fontfaceobserver'
 import download from 'downloadjs'
 
 @Component
@@ -41,10 +42,11 @@ export default class EmojiCanvas extends Vue {
     const el = this.$el as HTMLCanvasElement
     this.ctx = el.getContext('2d')
 
-    // TODO: 初回ロード時にうまく描画されない。もっときれいに実装できないかな。
-    setTimeout(() => {
+    const font = new FontFaceObserver(this.family)
+
+    font.load().then(() => {
       this.draw()
-    }, 1000)
+    })
   }
 
   draw(): void {
@@ -61,7 +63,6 @@ export default class EmojiCanvas extends Vue {
 
       lines.map((value: string, index) => {
         if (this.ctx) {
-          console.log('render!!')
           this.ctx.fillText(value, 0, index * 100, 200)
         }
       })

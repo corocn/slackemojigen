@@ -100,7 +100,7 @@ export default {
         },
         {
           text: '神',
-          weight: 'bold',
+          weight: 'normal',
           color: { r: 0, g: 0, b: 0, a: 1 }
         }
       ]
