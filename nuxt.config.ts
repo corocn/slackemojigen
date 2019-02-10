@@ -55,6 +55,9 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-134254520-1'
+    }],
     'nuxt-webfontloader',
     ['nuxt-fontawesome', {
       component: 'fa',
@@ -64,9 +67,6 @@ module.exports = {
           icons: ['fas']
         }
       ]
-    }],
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-134254520-1'
     }]
   ],
   /*
