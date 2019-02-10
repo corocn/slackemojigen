@@ -93,19 +93,49 @@ export default {
           text: 'すご\nーい',
           img: '001_sugo-i.png',
           weight: 'bold',
-          color: '#F5A623FF'
+          color: '#E4B34BFF'
         },
         {
           text: 'おつ\nかれ',
           img: '002_otsukare.png',
           weight: 'bold',
-          color: '#00FF00FF'
+          color: '#59B382FF'
+        },
+        {
+          text: 'なる\nほど',
+          img: '003_naruhodo.png',
+          weight: 'bold',
+          color: '#62C3EBFF'
         },
         {
           text: '神',
-          img: '003_god.png',
+          img: '004_god.png',
+          weight: 'bold',
+          color: '#CF375CFF'
+        },
+        {
+          text: 'ハイ\nサイ',
+          img: '005_haisai.png',
+          weight: 'bold',
+          color: '#E4B34BFF'
+        },
+        {
+          text: '草',
+          img: '006_kusa.png',
+          weight: 'bold',
+          color: '#59B382FF'
+        },
+        {
+          text: 'お大\n事に',
+          img: '007_odaijini.png',
+          weight: 'bold',
+          color: '#62C3EBFF'
+        },
+        {
+          text: '仏',
+          img: '008_hotoke.png',
           weight: 'normal',
-          color: '#000000FF'
+          color: '#CF375CFF'
         }
       ]
     }
