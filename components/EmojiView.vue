@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper mt-3 border-gray-lighter border-t border-solid p-2">
+  <div class="wrapper mb-3 border-gray-lighter border-t border-solid p-2">
     <div class="emoji-view-header flex justify-between">
       <span class="font-name">{{ family }}</span>
       <fa

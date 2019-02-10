@@ -1,6 +1,6 @@
 <template>
-  <section class="flex flex-row m-4">
-    <div class="emoji-controller mt-8">
+  <section class="flex flex-row m-4 mt-8">
+    <div class="emoji-controller">
       <h1 class="text-5xl">Slack<br />Emoji<br />Generator</h1>
 
       <div class="mt-2">
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="emoji-display flex flex-wrap justify-start">
-      <div v-for="family in fontFamilies" v-bind:key="family" class="m-6">
+      <div v-for="family in fontFamilies" v-bind:key="family" class="mx-6 mb-6">
         <emoji-view
           :text="text"
           :family="family"
