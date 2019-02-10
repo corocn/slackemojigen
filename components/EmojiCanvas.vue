@@ -5,6 +5,7 @@
     v-bind:style="{
       width: viewSize + 'px',
       height: viewSize + 'px',
+      backgroundColor: 'white',
       fontKerning: 'normal',
       textRendering: 'optimizeLegibility'
     }"
