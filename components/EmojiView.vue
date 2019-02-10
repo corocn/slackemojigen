@@ -61,8 +61,8 @@ export default class EmojiView extends Vue {
   @Prop({ type: String })
   text!: string
 
-  @Prop({ type: Object })
-  color!: any
+  @Prop({ type: String })
+  color!: string
 
   @Prop({ type: String })
   family!: string

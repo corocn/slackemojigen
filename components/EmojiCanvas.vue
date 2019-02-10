@@ -16,14 +16,15 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import FontFaceObserver from 'fontfaceobserver'
 import download from 'downloadjs'
+import tinycolor, { ColorFormats } from 'tinycolor2'
 
 @Component
 export default class EmojiCanvas extends Vue {
   @Prop({ type: String })
   text!: string
 
-  @Prop({ type: Object })
-  color!: any
+  @Prop({ type: String })
+  color!: string
 
   @Prop({ type: Number })
   size!: number
@@ -52,8 +53,9 @@ export default class EmojiCanvas extends Vue {
 
   draw(): void {
     if (this.ctx) {
-      const { r, g, b, a } = this.color || { r: 0, g: 0, b: 0, a: 1 }
-      this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`
+      this.ctx.fillStyle = `rgba(${this.rgba.r}, ${this.rgba.g}, ${
+        this.rgba.b
+      }, ${this.rgba.a})`
       this.ctx.textAlign = 'left'
       this.ctx.textBaseline = 'top'
       this.ctx.font = `${this.weight} ${this.size}px '${this.family}'`
@@ -68,6 +70,10 @@ export default class EmojiCanvas extends Vue {
         }
       })
     }
+  }
+
+  get rgba(): ColorFormats.RGBA {
+    return tinycolor(this.color || '#000000FF').toRgb()
   }
 
   download(): void {

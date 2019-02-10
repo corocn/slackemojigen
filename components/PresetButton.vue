@@ -22,8 +22,8 @@ export default class PresetButton extends Vue {
   @Prop({ type: String })
   weight!: string
 
-  @Prop({ type: Object })
-  color!: any
+  @Prop({ type: String })
+  color!: string
 
   click(): void {
     this.$emit('click', {

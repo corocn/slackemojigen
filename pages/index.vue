@@ -40,7 +40,7 @@
       <div class="mt-2">
         <h2 class="text-lg mb-2">Color</h2>
         <no-ssr placeholder="Picker Loading...">
-          <sketch v-model="colors" />
+          <sketch v-model="colorPicker" />
         </no-ssr>
       </div>
     </div>
@@ -49,7 +49,7 @@
         <emoji-view
           :text="text"
           :family="family"
-          :color="colors.rgba"
+          :color="colorPicker.hex8"
           :weight="weight"
         />
       </div>
@@ -61,6 +61,7 @@
 import EmojiView from '~/components/EmojiView'
 import { Sketch } from 'vue-color'
 import PresetButton from '../components/PresetButton'
+import tinycolor from 'tinycolor2'
 
 export default {
   components: {
@@ -72,7 +73,7 @@ export default {
     return {
       text: 'えも\nじ',
       weight: 'normal',
-      colors: { rbga: { r: 0, g: 0, b: 0, a: 1 } },
+      colorPicker: { hex8: '#FF0000FF' },
       fontFamilies: [
         'Noto Serif SC',
         'Noto Sans JP',
@@ -92,19 +93,19 @@ export default {
           text: 'すご\nーい',
           img: '001_sugo-i.png',
           weight: 'bold',
-          color: { r: 245, g: 166, b: 35, a: 1 }
+          color: '#F5A623FF'
         },
         {
           text: 'おつ\nかれ',
           img: '002_otsukare.png',
           weight: 'bold',
-          color: { r: 255, g: 0, b: 0, a: 1 }
+          color: '#00FF00FF'
         },
         {
           text: '神',
           img: '003_god.png',
           weight: 'normal',
-          color: { r: 0, g: 0, b: 0, a: 1 }
+          color: '#000000FF'
         }
       ]
     }
@@ -116,7 +117,14 @@ export default {
     onClickPreset(preset) {
       this.text = preset.text
       this.weight = preset.weight
-      this.colors = { rgba: preset.color }
+
+      const c = tinycolor(preset.color)
+      this.colorPicker = Object.assign({}, this.colorPicker, {
+        a: c.toRgb().a,
+        hex: c.toHex(),
+        hex8: c.toHex8(),
+        rgba: c.toRgb()
+      })
     }
   }
 }
