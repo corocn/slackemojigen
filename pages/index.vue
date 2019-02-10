@@ -71,9 +71,9 @@ export default {
   },
   asyncData() {
     return {
-      text: 'えも',
-      weight: 'normal',
-      colorPicker: { hex8: '#FF0000FF' },
+      text: 'えも\nじ',
+      weight: 'bold',
+      colorPicker: { hex8: '#CF375CFF' },
       fontFamilies: [
         'Noto Serif SC',
         'Noto Sans JP',
