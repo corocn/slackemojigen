@@ -64,11 +64,26 @@ export default class EmojiCanvas extends Vue {
 
       const lines: Array<string> = this.text.split('\n')
 
+      if (lines.length === 1 && lines[0].length > 1) {
+        // 1行だけの場合は、縦に引き伸ばす
+        this.ctx.scale(1, 2)
+      } else if (
+        lines.length > 1 &&
+        lines[0].length === 1 &&
+        lines[1].length === 1
+      ) {
+        // 1列だけの場合は、横に引き伸ばす
+        this.ctx.scale(2, 1)
+      }
+
       lines.map((value: string, index) => {
         if (this.ctx) {
           this.ctx.fillText(value, 0, index * 100, 200)
         }
       })
+
+      // reset scale
+      this.ctx.setTransform(1, 0, 0, 1, 0, 0)
     }
   }
 

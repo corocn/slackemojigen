@@ -71,7 +71,7 @@ export default {
   },
   asyncData() {
     return {
-      text: 'えも\nじ',
+      text: 'えも',
       weight: 'normal',
       colorPicker: { hex8: '#FF0000FF' },
       fontFamilies: [
