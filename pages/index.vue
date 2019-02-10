@@ -1,9 +1,7 @@
 <template>
   <section class="flex flex-row m-4 mt-8">
     <div class="emoji-controller">
-      <h1 class="text-5xl">Slack<br />Emoji<br />Generator</h1>
-
-      <div class="mt-2">
+      <div>
         <h2 class="text-lg mb-2">Preset</h2>
         <preset-button
           v-for="preset in presets"
@@ -42,6 +40,24 @@
         <no-ssr placeholder="Picker Loading...">
           <sketch v-model="colorPicker" />
         </no-ssr>
+      </div>
+
+      <div class="mt-2">
+        <h2 class="text-lg mb-2">ReadMe</h2>
+        <p class="m-1">
+          <a href="https://fonts.google.com/" class="text-blue-dark"
+            >Google Fonts</a
+          >
+          を使用しています。
+        </p>
+        <p class="m-1">
+          フォントの読み込みが完了するまで時間がかかる場合があります。
+        </p>
+        <p class="m-1">
+          作者は<a href="https://twitter.com/corocn" class="text-blue-dark"
+            >@corocn</a
+          >です。フィードバック頂けると喜びます。不具合連絡もこちら。現状Chromeのみで動作確認しています。
+        </p>
       </div>
     </div>
     <div class="emoji-display flex flex-wrap justify-start">
@@ -162,6 +178,7 @@ export default {
 
 <style scoped>
 .emoji-controller {
+  max-width: 250px;
   min-width: 250px;
 }
 

@@ -1,10 +1,32 @@
 <template>
   <div>
+    <nav class="px-2 flex">
+      <h1 class="text-5xl">Slack Emoji Generator</h1>
+      <div class="m-3 mt-4">
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          class="twitter-share-button"
+          data-text="Slack Emoji Generator"
+          data-hashtags="slackemojigen"
+          data-lang="en"
+          data-show-count="false"
+          >Tweet</a
+        ><script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
+    </nav>
     <nuxt />
   </div>
 </template>
 
 <style>
+.twitter-icon {
+  color: #49a0eb;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
