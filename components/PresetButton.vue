@@ -1,5 +1,11 @@
 <template>
-  <button @click="click">{{ text.replace(/\s+/g, '') }}</button>
+  <img
+    class="m-1 cursor-pointer"
+    width="20"
+    height="20"
+    :src="imagePath"
+    @click="click"
+  />
 </template>
 
 <script lang="ts">
@@ -9,6 +15,9 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 export default class PresetButton extends Vue {
   @Prop({ type: String })
   text!: string
+
+  @Prop({ type: String })
+  img!: string
 
   @Prop({ type: String })
   weight!: string
@@ -22,6 +31,10 @@ export default class PresetButton extends Vue {
       weight: this.weight,
       color: this.color
     })
+  }
+
+  get imagePath(): string {
+    return `presets/${this.img}`
   }
 }
 </script>

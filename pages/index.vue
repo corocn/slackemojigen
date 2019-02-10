@@ -5,15 +5,15 @@
 
       <div class="mt-2">
         <h2 class="text-lg mb-2">Preset</h2>
-
-        <li v-for="preset in presets" :key="preset.text">
-          <preset-button
-            :text="preset.text"
-            :color="preset.color"
-            :weight="preset.weight"
-            v-on:click="onClickPreset"
-          ></preset-button>
-        </li>
+        <preset-button
+          v-for="preset in presets"
+          :key="preset.text"
+          :text="preset.text"
+          :img="preset.img"
+          :color="preset.color"
+          :weight="preset.weight"
+          v-on:click="onClickPreset"
+        ></preset-button>
       </div>
 
       <div class="mt-2">
@@ -72,7 +72,7 @@ export default {
     return {
       text: 'えも\nじ',
       weight: 'normal',
-      colors: { rgba: { r: 0, g: 0, b: 0, a: 1 } },
+      colors: { rbga: { r: 0, g: 0, b: 0, a: 1 } },
       fontFamilies: [
         'Noto Serif SC',
         'Noto Sans JP',
@@ -89,17 +89,20 @@ export default {
       ],
       presets: [
         {
+          text: 'すご\nーい',
+          img: '001_sugo-i.png',
+          weight: 'bold',
+          color: { r: 245, g: 166, b: 35, a: 1 }
+        },
+        {
           text: 'おつ\nかれ',
+          img: '002_otsukare.png',
           weight: 'bold',
           color: { r: 255, g: 0, b: 0, a: 1 }
         },
         {
-          text: 'すご\nーい',
-          weight: 'bold',
-          color: { r: 255, g: 146, b: 0, a: 1 }
-        },
-        {
           text: '神',
+          img: '003_god.png',
           weight: 'normal',
           color: { r: 0, g: 0, b: 0, a: 1 }
         }
@@ -113,7 +116,7 @@ export default {
     onClickPreset(preset) {
       this.text = preset.text
       this.weight = preset.weight
-      this.colors.rgba = preset.color
+      this.colors = { rgba: preset.color }
     }
   }
 }
@@ -121,7 +124,7 @@ export default {
 
 <style scoped>
 .emoji-controller {
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .emoji-display {
