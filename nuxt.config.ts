@@ -64,6 +64,9 @@ module.exports = {
           icons: ['fas']
         }
       ]
+    }],
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-134254520-1'
     }]
   ],
   /*
