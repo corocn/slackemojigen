@@ -27,7 +27,7 @@
           @click="setWeight(w)"
           class="bg-white hover:bg-grey-lightest text-grey-darkest text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
           v-bind:style="{
-            minWidth: '50px',
+            minWidth: '64px',
             fontWeight: w
           }"
         >
@@ -127,9 +127,9 @@ export default {
           color: '#CF375CFF'
         },
         {
-          text: 'ハイ\nサイ',
-          img: '005_haisai.png',
-          weight: '700',
+          text: 'ＬＧ\nＴＭ',
+          img: '005_lgtm.png',
+          weight: '900',
           color: '#E4B34BFF'
         },
         {
@@ -145,8 +145,8 @@ export default {
           color: '#62C3EBFF'
         },
         {
-          text: '仏',
-          img: '008_hotoke.png',
+          text: 'たす\nけて',
+          img: '008_tasukete.png',
           weight: '400',
           color: '#CF375CFF'
         }

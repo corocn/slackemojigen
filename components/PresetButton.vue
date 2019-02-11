@@ -1,8 +1,8 @@
 <template>
   <img
     class="m-1 cursor-pointer"
-    width="20"
-    height="20"
+    width="22"
+    height="22"
     :src="imagePath"
     @click="click"
   />

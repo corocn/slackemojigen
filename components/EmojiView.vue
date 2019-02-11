@@ -20,31 +20,22 @@
         ref="canvas"
       ></emoji-canvas>
       <emoji-canvas
-        class="s64"
+        class="s32 mx-1"
         :text="text"
         :size="calculatedSize"
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="64"
+        :view-size="40"
       ></emoji-canvas>
       <emoji-canvas
-        class="s32"
+        class="s16 mx-1"
         :text="text"
         :size="calculatedSize"
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="32"
-      ></emoji-canvas>
-      <emoji-canvas
-        class="s16"
-        :text="text"
-        :size="calculatedSize"
-        :family="family"
-        :color="color"
-        :weight="weight"
-        :view-size="18"
+        :view-size="22"
       ></emoji-canvas>
     </div>
   </div>
@@ -85,16 +76,16 @@ export default class EmojiView extends Vue {
 
 <style scoped>
 .wrapper {
-  width: 300px;
+  width: 280px;
 }
 
 .s64 {
   margin-bottom: 1px;
 }
 .s32 {
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 .s16 {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 </style>
