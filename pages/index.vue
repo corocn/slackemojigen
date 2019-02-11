@@ -42,24 +42,17 @@
         </no-ssr>
       </div>
 
-      <div class="mt-2">
-        <h2 class="text-lg mb-2">ReadMe</h2>
+      <div class="mt-4">
+        <h2 class="text-lg mb-2">Readme</h2>
         <p class="m-1">
           <a href="https://fonts.google.com/" class="text-blue-dark"
             >Google Fonts</a
           >
-          を使用しています。
-        </p>
-        <p class="m-1">
-          フォントの読み込みが完了するまで適切に描画されません。スマホ対応
-          してません。3行以上に対応していません。
-        </p>
-        <p class="m-1">
-          フィードバックや不具合連絡は
+          を使用しています。動作確認はChromeのみ。スマホ未検証（一応使える）。3行以上は未対応。描画がおかしかったらリロード推奨です。フィードバックや不具合連絡は
           <a href="https://twitter.com/corocn" class="text-blue-dark"
             >@corocn</a
           >
-          まで。現状Chromeのみで動作確認しています。
+          まで。
         </p>
       </div>
     </div>
