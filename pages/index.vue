@@ -22,16 +22,16 @@
       <div class="mt-2">
         <h2 class="text-lg mb-2">Weight</h2>
         <button
-          @click="setWeight('normal')"
-          class="bg-white hover:bg-grey-lightest text-grey-darkest font-normal py-2 px-4 border border-grey-light rounded shadow"
+          v-for="w in weights"
+          :key="w"
+          @click="setWeight(w)"
+          class="bg-white hover:bg-grey-lightest text-grey-darkest text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
+          v-bind:style="{
+            minWidth: '50px',
+            fontWeight: w
+          }"
         >
-          Normal
-        </button>
-        <button
-          @click="setWeight('bold')"
-          class="bg-white hover:bg-grey-lightest text-grey-darkest font-bold py-2 px-4 border border-grey-light rounded shadow"
-        >
-          Bold
+          {{ w }}
         </button>
       </div>
 
@@ -91,69 +91,70 @@ export default {
   asyncData() {
     return {
       text: 'えも\nじ',
-      weight: 'bold',
+      weight: '400',
+      weights: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
       colorPicker: { hex8: '#CF375CFF' },
       fontFamilies: [
-        'Noto Serif SC',
-        'Noto Sans JP',
-        'Noto Sans TC',
-        'Kosugi Maru',
-        'Noto Serif TC',
         'M PLUS 1p',
-        'Sawarabi Mincho',
-        'Noto Sans SC',
-        'Sawarabi Gothic',
-        'Noto Serif JP',
         'M PLUS Rounded 1c',
-        'Kosugi'
+        'Noto Sans JP',
+        'Noto Sans SC',
+        'Noto Sans TC',
+        'Noto Serif JP',
+        'Noto Serif SC',
+        'Noto Serif TC',
+        'Kosugi',
+        'Kosugi Maru',
+        'Sawarabi Gothic',
+        'Sawarabi Mincho'
       ],
       presets: [
         {
           text: 'すご\nーい',
           img: '001_sugo-i.png',
-          weight: 'bold',
+          weight: '700',
           color: '#E4B34BFF'
         },
         {
           text: 'おつ\nかれ',
           img: '002_otsukare.png',
-          weight: 'bold',
+          weight: '700',
           color: '#59B382FF'
         },
         {
           text: 'なる\nほど',
           img: '003_naruhodo.png',
-          weight: 'bold',
+          weight: '700',
           color: '#62C3EBFF'
         },
         {
           text: '神',
           img: '004_god.png',
-          weight: 'bold',
+          weight: '700',
           color: '#CF375CFF'
         },
         {
           text: 'ハイ\nサイ',
           img: '005_haisai.png',
-          weight: 'bold',
+          weight: '700',
           color: '#E4B34BFF'
         },
         {
           text: '草',
           img: '006_kusa.png',
-          weight: 'bold',
+          weight: '700',
           color: '#59B382FF'
         },
         {
           text: 'お大\n事に',
           img: '007_odaijini.png',
-          weight: 'bold',
+          weight: '700',
           color: '#62C3EBFF'
         },
         {
           text: '仏',
           img: '008_hotoke.png',
-          weight: 'normal',
+          weight: '400',
           color: '#CF375CFF'
         }
       ]

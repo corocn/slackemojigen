@@ -18,20 +18,21 @@ module.exports = {
   },
 
   webfontloader: {
+    timeout: 30000,
     google: {
       families: [
+        'M+PLUS+1p:100,300,400,500,700,800,900',
+        'M+PLUS+Rounded+1c:100,300,400,500,700,800,900',
+        'Noto+Sans+JP:100,300,400,500,700,900',
+        'Noto+Sans+SC:100,300,400,500,700,900',
+        'Noto+Sans+TC:100,300,400,500,700,900',
+        'Noto+Serif+JP:200,300,400,500,600,700,900',
+        'Noto+Serif+SC:200,300,400,500,600,700,900',
+        'Noto+Serif+TC:200,300,400,500,600,700,900',
         'Kosugi',
         'Kosugi+Maru',
-        'M+PLUS+1p',
-        'M+PLUS+Rounded+1c',
-        'Noto+Sans+JP',
-        'Noto+Sans+SC',
-        'Noto+Sans+TC',
-        'Noto+Serif+JP',
-        'Noto+Serif+SC',
-        'Noto+Serif+TC',
         'Sawarabi+Gothic',
-        'Sawarabi+Mincho'
+        'Sawarabi+Mincho',
       ]
     }
   },

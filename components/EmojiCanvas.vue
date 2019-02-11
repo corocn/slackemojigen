@@ -44,7 +44,7 @@ export default class EmojiCanvas extends Vue {
     const el = this.$el as HTMLCanvasElement
     this.ctx = el.getContext('2d')
 
-    const font = new FontFaceObserver(this.family)
+    const font = new FontFaceObserver(this.family, { weight: this.weight })
 
     font.load().then(() => {
       this.draw()
