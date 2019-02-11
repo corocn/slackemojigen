@@ -55,9 +55,11 @@
           してません。3行以上に対応していません。
         </p>
         <p class="m-1">
-          作者は<a href="https://twitter.com/corocn" class="text-blue-dark"
+          フィードバックや不具合連絡は
+          <a href="https://twitter.com/corocn" class="text-blue-dark"
             >@corocn</a
-          >です。フィードバック頂けると喜びます。不具合連絡もこちら。現状Chromeのみで動作確認しています。
+          >
+          まで。現状Chromeのみで動作確認しています。
         </p>
       </div>
     </div>

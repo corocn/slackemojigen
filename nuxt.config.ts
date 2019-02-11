@@ -11,7 +11,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Slack Emoji GeneratorはSlack用の絵文字を生成するツールです。' }
+      { name: 'google-site-verification', content: 'A-wiGtauu1jdzkCZqiD7PceFsf5sciISBuT4Ctv98vc' },
+      { hid: 'description', name: 'description', content: 'Slack Emoji Generator はSlack用の絵文字を生成するツールです。複数フォントで絵文字を比べることができます。' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
