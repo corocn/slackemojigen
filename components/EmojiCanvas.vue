@@ -60,8 +60,11 @@ export default class EmojiCanvas extends Vue {
 
         const lines: Array<string> = this.text.split('\n')
 
+        let offset = 512 / lines.length / 2
+
         if (lines.length === 1 && lines[0].length > 1) {
           // 1行だけの場合は、縦に引き伸ばす
+          offset = 512 / 4
           this.ctx.scale(1, 2)
         } else if (
           lines.length > 1 &&
@@ -72,11 +75,11 @@ export default class EmojiCanvas extends Vue {
           this.ctx.scale(2, 1)
         }
 
-        const offset = 512 / lines.length / 2
+
 
         lines.map((value: string, index) => {
           if (this.ctx) {
-            this.ctx.fillText(value, 0, index * 256 + offset, 512)
+            this.ctx.fillText(value, 0, offset + index * 256, 512)
           }
         })
 
