@@ -1,7 +1,7 @@
 <template>
   <canvas
-    width="200"
-    height="200"
+    width="512"
+    height="512"
     :style="{
       width: viewSize + 'px',
       height: viewSize + 'px',
@@ -57,7 +57,7 @@ export default class EmojiCanvas extends Vue {
         this.ctx.textBaseline = 'top'
         this.ctx.font = `${this.weight} ${this.size}px '${this.family}'`
         this.ctx.beginPath()
-        this.ctx.clearRect(0, 0, 200, 200)
+        this.ctx.clearRect(0, 0, 512, 512)
 
         const lines: Array<string> = this.text.split('\n')
 
@@ -75,7 +75,7 @@ export default class EmojiCanvas extends Vue {
 
         lines.map((value: string, index) => {
           if (this.ctx) {
-            this.ctx.fillText(value, 0, index * 100, 200)
+            this.ctx.fillText(value, 0, index * 256, 512)
           }
         })
 

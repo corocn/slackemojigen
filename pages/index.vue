@@ -94,7 +94,7 @@ export default {
   asyncData() {
     return {
       text: 'えも\nじ',
-      weight: '400',
+      weight: '600',
       weights: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
       colorPicker: { hex8: '#CF375CFF' },
       fontFamilies: [

@@ -26,7 +26,7 @@
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="40"
+        :view-size="64"
       />
       <emoji-canvas
         class="s16 mx-1"
@@ -35,7 +35,7 @@
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="22"
+        :view-size="32"
       />
     </div>
   </div>
@@ -67,9 +67,9 @@ export default class EmojiView extends Vue {
 
   get calculatedSize() {
     if (this.text.length === 1) {
-      return 200
+      return 512
     }
-    return 100
+    return 256
   }
 }
 </script>
