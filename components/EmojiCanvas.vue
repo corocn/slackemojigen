@@ -6,7 +6,8 @@
       width: viewSize + 'px',
       height: viewSize + 'px',
       backgroundColor: 'white',
-      fontKerning: 'normal'
+      fontKerning: 'normal',
+      textRendering: 'optimizeLegibility'
     }"
   ></canvas>
 </template>
@@ -74,8 +75,6 @@ export default class EmojiCanvas extends Vue {
           // 1列だけの場合は、横に引き伸ばす
           this.ctx.scale(2, 1)
         }
-
-
 
         lines.map((value: string, index) => {
           if (this.ctx) {
