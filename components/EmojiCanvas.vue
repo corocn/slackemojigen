@@ -6,10 +6,9 @@
       width: viewSize + 'px',
       height: viewSize + 'px',
       backgroundColor: 'white',
-      fontKerning: 'normal',
-      textRendering: 'optimizeLegibility'
+      fontKerning: 'normal'
     }"
-  />
+  ></canvas>
 </template>
 
 <script lang="ts">
@@ -54,7 +53,7 @@ export default class EmojiCanvas extends Vue {
           this.rgba.b
         }, ${this.rgba.a})`
         this.ctx.textAlign = 'left'
-        this.ctx.textBaseline = 'top'
+        this.ctx.textBaseline = 'middle'
         this.ctx.font = `${this.weight} ${this.size}px '${this.family}'`
         this.ctx.beginPath()
         this.ctx.clearRect(0, 0, 512, 512)
@@ -73,9 +72,11 @@ export default class EmojiCanvas extends Vue {
           this.ctx.scale(2, 1)
         }
 
+        const offset = 512 / lines.length / 2
+
         lines.map((value: string, index) => {
           if (this.ctx) {
-            this.ctx.fillText(value, 0, index * 256, 512)
+            this.ctx.fillText(value, 0, index * 256 + offset, 512)
           }
         })
 
