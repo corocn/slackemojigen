@@ -2,7 +2,7 @@
   <canvas
     width="200"
     height="200"
-    v-bind:style="{
+    :style="{
       width: viewSize + 'px',
       height: viewSize + 'px',
       backgroundColor: 'white',

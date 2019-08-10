@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav class="px-2 flex">
-      <h1 class="text-5xl">Slack Emoji Generator</h1>
+      <h1 class="text-5xl">
+        Slack Emoji Generator
+      </h1>
       <div class="m-3 mt-4">
         <a
           href="https://twitter.com/share?ref_src=twsrc%5Etfw"
@@ -15,7 +17,7 @@
           async
           src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
-        ></script>
+        />
       </div>
     </nav>
     <nuxt />

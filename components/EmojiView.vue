@@ -10,6 +10,7 @@
     </div>
     <div class="emoji-view-body mt-3">
       <emoji-canvas
+        ref="canvas"
         class="s128"
         :text="text"
         :size="calculatedSize"
@@ -17,8 +18,7 @@
         :color="color"
         :weight="weight"
         :view-size="128"
-        ref="canvas"
-      ></emoji-canvas>
+      />
       <emoji-canvas
         class="s32 mx-1"
         :text="text"
@@ -27,7 +27,7 @@
         :color="color"
         :weight="weight"
         :view-size="40"
-      ></emoji-canvas>
+      />
       <emoji-canvas
         class="s16 mx-1"
         :text="text"
@@ -36,7 +36,7 @@
         :color="color"
         :weight="weight"
         :view-size="22"
-      ></emoji-canvas>
+      />
     </div>
   </div>
 </template>

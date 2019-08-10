@@ -1,11 +1,18 @@
 {
-  "extends": "@nuxt/typescript",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "allowJs": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
     "types": [
       "@types/node",
       "@nuxt/vue-app"

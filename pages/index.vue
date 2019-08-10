@@ -2,7 +2,9 @@
   <section class="flex flex-row m-4 mt-8">
     <div class="emoji-controller">
       <div>
-        <h2 class="text-lg mb-2">Preset</h2>
+        <h2 class="text-lg mb-2">
+          Preset
+        </h2>
         <preset-button
           v-for="preset in presets"
           :key="preset.text"
@@ -10,40 +12,48 @@
           :img="preset.img"
           :color="preset.color"
           :weight="preset.weight"
-          v-on:click="onClickPreset"
-        ></preset-button>
+          @click="onClickPreset"
+        />
       </div>
 
       <div class="mt-2">
-        <h2 class="text-lg mb-2">Text</h2>
+        <h2 class="text-lg mb-2">
+          Text
+        </h2>
         <textarea v-model="text" class="border rounded w-1/2 h-16" />
       </div>
 
       <div class="mt-2">
-        <h2 class="text-lg mb-2">Weight</h2>
+        <h2 class="text-lg mb-2">
+          Weight
+        </h2>
         <button
           v-for="w in weights"
           :key="w"
-          @click="setWeight(w)"
           class="bg-white hover:bg-grey-lightest text-grey-darkest text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
-          v-bind:style="{
+          :style="{
             minWidth: '64px',
             fontWeight: w
           }"
+          @click="setWeight(w)"
         >
           {{ w }}
         </button>
       </div>
 
       <div class="mt-2">
-        <h2 class="text-lg mb-2">Color</h2>
+        <h2 class="text-lg mb-2">
+          Color
+        </h2>
         <no-ssr placeholder="Picker Loading...">
           <sketch v-model="colorPicker" />
         </no-ssr>
       </div>
 
       <div class="mt-4">
-        <h2 class="text-lg mb-2">Readme</h2>
+        <h2 class="text-lg mb-2">
+          Readme
+        </h2>
         <p class="m-1">
           <a href="https://fonts.google.com/" class="text-blue-dark"
             >Google Fonts</a
@@ -57,7 +67,7 @@
       </div>
     </div>
     <div class="emoji-display flex flex-wrap justify-start">
-      <div v-for="family in fontFamilies" v-bind:key="family" class="mx-6 mb-6">
+      <div v-for="family in fontFamilies" :key="family" class="mx-6 mb-6">
         <emoji-view
           :text="text"
           :family="family"
@@ -70,10 +80,10 @@
 </template>
 
 <script>
-import EmojiView from '~/components/EmojiView'
 import { Sketch } from 'vue-color'
-import PresetButton from '../components/PresetButton'
 import tinycolor from 'tinycolor2'
+import PresetButton from '../components/PresetButton'
+import EmojiView from '~/components/EmojiView'
 
 export default {
   components: {

@@ -1,13 +1,15 @@
 <template>
   <section class="flex flex-row m-4 mt-8">
     <div class="mt-2">
-      <h2 class="text-lg mb-2">Text</h2>
+      <h2 class="text-lg mb-2">
+        Text
+      </h2>
       <textarea v-model="text" class="border rounded w-1/2 h-16" />
     </div>
     <div class="emoji-display flex flex-wrap justify-start">
-      <div v-for="weight in weights" v-bind:key="weight" class="mx-6 mb-6">
+      <div v-for="weight in weights" :key="weight" class="mx-6 mb-6">
         <span
-          v-bind:style="{
+          :style="{
             fontSize: '50px',
             fontFamily: family,
             fontWeight: weight

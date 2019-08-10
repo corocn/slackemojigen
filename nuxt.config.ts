@@ -62,7 +62,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     ['@nuxtjs/google-analytics', {
-      id: 'UA-134254520-1'
+      id: process.env.GOOGLE_ANALYTICS_UA || 'NO_UA'
     }],
     'nuxt-webfontloader',
     ['nuxt-fontawesome', {
