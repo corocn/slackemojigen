@@ -58,7 +58,7 @@
           <a href="https://fonts.google.com/" class="text-blue-dark"
             >Google Fonts</a
           >
-          を使用しています。動作確認はChromeのみ。スマホ未検証（一応使える）。3行以上は未対応。描画がおかしかったらリロード推奨です。フィードバックや不具合連絡は
+          を使用しています。動作確認はChrome, Firefox, Safari。スマホ未検証（一応使える）。3行以上は未対応。描画がおかしかったらリロード推奨です。フィードバックや不具合連絡は
           <a href="https://twitter.com/corocn" class="text-blue-dark"
             >@corocn</a
           >
