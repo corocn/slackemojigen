@@ -1,8 +1,9 @@
 {
   "name": "slackemojigen",
   "version": "1.0.0",
-  "description": "My stellar Nuxt.js project",
+  "description": "An emoji generator for Slack",
   "author": "corocn",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt",

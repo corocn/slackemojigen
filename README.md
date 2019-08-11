@@ -15,9 +15,15 @@ yarn dev
  * Firefox
  * Safari
 
-## Thank you
+## Authors
 
- * @exoego
+[@corocn](https://github.com/corocn)
+
+### Contributors
+ 
+ * [@exoego](https://github.com/exoego)
+
+Thank you!
 
 ## License
 
