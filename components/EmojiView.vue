@@ -26,7 +26,7 @@
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="64"
+        :view-size="40"
       />
       <emoji-canvas
         class="s16 mx-1"
@@ -35,7 +35,7 @@
         :family="family"
         :color="color"
         :weight="weight"
-        :view-size="32"
+        :view-size="20"
       />
     </div>
   </div>
