@@ -20,7 +20,7 @@
         <h2 class="text-lg mb-2">
           Text
         </h2>
-        <textarea v-model="text" class="border rounded w-1/2 h-16" />
+        <textarea v-model="text" class="border rounded emoji-input" />
       </div>
 
       <div class="mt-2">
@@ -191,5 +191,13 @@ export default {
 
 .emoji-display {
   max-width: 1100px;
+}
+
+.emoji-input {
+  font-size: 150%;
+  height: 2.5em;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
 }
 </style>
