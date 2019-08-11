@@ -61,6 +61,26 @@ export default class EmojiCanvas extends Vue {
 
         const lines: Array<string> = this.text.split('\n')
 
+        // 文字のトップがキャンバス外にはみ出る場合（Firefoxなど）それが収まるオフセットを探す。はみ出ない場合は0
+        const topOverflowOffset = (() => {
+          this.ctx.textBaseline = 'top'
+          outer: for (let y = 0; y < 512; y++) {
+            this.ctx.clearRect(0, 0, 512, 512)
+            this.ctx.fillText(lines[0], 0, y, 512)
+            const imageData = this.ctx.getImageData(0, 0, 512, 2).data
+            for (let x = 0; x < 512; x++) {
+              const alpha = imageData[x * 4 + 3]
+              const hasPixel = alpha > 0
+              if (hasPixel) {
+                continue outer
+              }
+            }
+            this.ctx.textBaseline = 'middle'
+            this.ctx.clearRect(0, 0, 512, 512)
+            return y
+          }
+        })()
+
         let offset = 512 / lines.length / 2
 
         if (lines.length === 1 && lines[0].length > 1) {
@@ -78,7 +98,7 @@ export default class EmojiCanvas extends Vue {
 
         lines.map((value: string, index) => {
           if (this.ctx) {
-            this.ctx.fillText(value, 0, offset + index * 256, 512)
+            this.ctx.fillText(value, 0, topOverflowOffset + offset + index * 256, 512)
           }
         })
 
