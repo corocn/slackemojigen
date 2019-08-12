@@ -16,7 +16,11 @@ module.exports = {
         name: 'description',
         content: 'Slack Emoji Generator はSlack用の絵文字を生成する無料ツールです。複数フォントで絵文字を比べることができます。オリジナルの絵文字を作ってみましょう。'
       },
-      { name: 'keywords', content: '絵文字,Emoji,emoji,えもじ,生成,メーカー,ジェネレーター,ツール,Slack Emoji Generator,slackemojigen,絵文字ジェネレーター'}
+      { name: 'keywords', content: '絵文字,Emoji,emoji,えもじ,生成,メーカー,ジェネレーター,ツール,Slack Emoji Generator,slackemojigen,絵文字ジェネレーター'},
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'og:title', content: 'Slack Emoji Generator' },
+      { name: 'og:description', content: 'An emoji generator for Slack' },
+      { name: 'og:image', content: 'https://slackemojigen.com/ogp.png' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
