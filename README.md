@@ -1,5 +1,7 @@
 # Slack Emoji Generator
 
+Slack Emoji Generator is blazing fast emoji generator for Slack
+
 https://slackemojigen.com/
  
 ## Setup
