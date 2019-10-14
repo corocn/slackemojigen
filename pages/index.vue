@@ -51,19 +51,11 @@
       </div>
 
       <div class="mt-4">
-        <h2 class="text-lg mb-2">
-          Readme
-        </h2>
-        <p class="m-1">
-          <a href="https://fonts.google.com/" class="text-blue-dark"
-            >Google Fonts</a
-          >
-          を使用しています。動作確認はChrome, Firefox, Safari。スマホ未検証（一応使える）。3行以上は未対応。描画がおかしかったらリロード推奨です。フィードバックや不具合連絡は
-          <a href="https://twitter.com/corocn" class="text-blue-dark"
-            >@corocn</a
-          >
-          まで。
-        </p>
+        <nuxt-link to="/help" class="no-underline">
+          <h2 class="text-lg mb-2 text-blue-dark">
+            Help
+          </h2>
+        </nuxt-link>
       </div>
     </div>
     <div class="emoji-display flex flex-wrap justify-start">
