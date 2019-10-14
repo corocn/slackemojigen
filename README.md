@@ -4,6 +4,8 @@ Slack Emoji Generator is blazing fast emoji generator for Slack
 
 https://slackemojigen.com/
  
+<img src="./cover.png" width="600">
+
 ## Setup
 
 ```
