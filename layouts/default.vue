@@ -18,6 +18,8 @@
           src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
         />
+        <a class="github-button" href="https://github.com/corocn/slackemojigen" data-size="large" aria-label="Star corocn/slackemojigen on GitHub">Star</a>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
       </div>
     </nav>
     <nuxt />
