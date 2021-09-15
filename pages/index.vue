@@ -110,43 +110,43 @@ export default {
         {
           text: 'すご\nーい',
           img: '001_sugo-i.png',
-          weight: '700',
+          weight: '500',
           color: '#E4B34BFF'
         },
         {
           text: 'おつ\nかれ',
           img: '002_otsukare.png',
-          weight: '700',
+          weight: '500',
           color: '#59B382FF'
         },
         {
           text: 'なる\nほど',
           img: '003_naruhodo.png',
-          weight: '700',
+          weight: '500',
           color: '#62C3EBFF'
         },
         {
           text: '神',
           img: '004_god.png',
-          weight: '700',
+          weight: '500',
           color: '#CF375CFF'
         },
         {
           text: 'ＬＧ\nＴＭ',
           img: '005_lgtm.png',
-          weight: '900',
+          weight: '500',
           color: '#E4B34BFF'
         },
         {
           text: '草',
           img: '006_kusa.png',
-          weight: '700',
+          weight: '500',
           color: '#59B382FF'
         },
         {
           text: 'お大\n事に',
           img: '007_odaijini.png',
-          weight: '700',
+          weight: '500',
           color: '#62C3EBFF'
         },
         {
