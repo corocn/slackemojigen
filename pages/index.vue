@@ -43,7 +43,7 @@
 
       <div class="mt-2">
         <h2 class="text-lg mb-2">
-          DarkMode
+          Preview Mode
         </h2>
         <button
           class="bg-white hover:bg-grey-lightest text-grey-darkest text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
