@@ -18,6 +18,7 @@
         :color="color"
         :weight="weight"
         :view-size="128"
+        :background-color="backgroundColor"
       />
       <emoji-canvas
         class="s32 mx-1"
@@ -27,6 +28,7 @@
         :color="color"
         :weight="weight"
         :view-size="40"
+        :background-color="backgroundColor"
       />
       <emoji-canvas
         class="s16 mx-1"
@@ -36,6 +38,7 @@
         :color="color"
         :weight="weight"
         :view-size="20"
+        :background-color="backgroundColor"
       />
     </div>
   </div>
@@ -54,6 +57,9 @@ export default class EmojiView extends Vue {
 
   @Prop({ type: String })
   color!: string
+
+  @Prop({ type: String })
+  backgroundColor!: string
 
   @Prop({ type: String })
   family!: string

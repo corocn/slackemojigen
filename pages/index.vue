@@ -43,6 +43,24 @@
 
       <div class="mt-2">
         <h2 class="text-lg mb-2">
+          DarkMode
+        </h2>
+        <button
+          class="bg-white hover:bg-grey-lightest text-grey-darkest text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
+          @click="setBackgroundColor('#FFFFFF')"
+        >
+          Light mode
+        </button>
+        <button
+          class="bg-black hover:bg-grey-darkest text-white text-sm m-1 py-1 px-4 border border-grey-light rounded-lg shadow"
+          @click="setBackgroundColor('#1B1D21')"
+        >
+          Dark mode
+        </button>
+      </div>
+
+      <div class="mt-2">
+        <h2 class="text-lg mb-2">
           Color
         </h2>
         <no-ssr placeholder="Picker Loading...">
@@ -64,6 +82,7 @@
           :text="text"
           :family="family"
           :color="colorPicker.hex8"
+          :background-color="backgroundColor"
           :weight="weight"
         />
       </div>
@@ -89,6 +108,7 @@ export default {
       weight: '500',
       weights: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
       colorPicker: { hex8: '#CF375CFF' },
+      backgroundColor: '#FFFFFF',
       fontFamilies: [
         'M PLUS Rounded 1c',
         'Noto Sans JP',
@@ -161,6 +181,9 @@ export default {
   methods: {
     setWeight(value) {
       this.weight = value
+    },
+    setBackgroundColor(value) {
+      this.backgroundColor = value
     },
     onClickPreset(preset) {
       this.text = preset.text
