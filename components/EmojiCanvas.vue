@@ -5,7 +5,7 @@
     :style="{
       width: viewSize + 'px',
       height: viewSize + 'px',
-      backgroundColor: 'white',
+      backgroundColor: backgroundColor,
       fontKerning: 'normal',
       textRendering: 'optimizeLegibility'
     }"
@@ -38,11 +38,16 @@ export default class EmojiCanvas extends Vue {
   @Prop({ type: Number })
   viewSize!: number
 
+  @Prop({ type: String })
+  backgroundColor!: string
+
   ctx: CanvasRenderingContext2D | null = null
 
+  canvas: HTMLCanvasElement
+
   mounted(): void {
-    const el = this.$el as HTMLCanvasElement
-    this.ctx = el.getContext('2d')
+    this.canvas = this.$el as HTMLCanvasElement
+    this.ctx = this.canvas.getContext('2d')
     this.draw()
   }
 
@@ -149,6 +154,11 @@ export default class EmojiCanvas extends Vue {
 
   @Watch('viewSize')
   onViewSizeChange(): void {
+    this.draw()
+  }
+
+  @Watch('backgroundColor')
+  onBackgroundColorChange(): void {
     this.draw()
   }
 }
