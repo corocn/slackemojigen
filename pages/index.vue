@@ -90,18 +90,21 @@ export default {
       weights: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
       colorPicker: { hex8: '#CF375CFF' },
       fontFamilies: [
-        'M PLUS 1p',
         'M PLUS Rounded 1c',
         'Noto Sans JP',
-        'Noto Sans SC',
-        'Noto Sans TC',
         'Noto Serif JP',
-        'Noto Serif SC',
-        'Noto Serif TC',
-        'Kosugi',
         'Kosugi Maru',
         'Sawarabi Gothic',
-        'Sawarabi Mincho'
+        'Sawarabi Mincho',
+        'RocknRoll One',
+        'Dela Gothic One',
+        'Rampart One',
+        'Reggae One',
+        'DotGothic16',
+        'Hachi Maru Pop',
+        'Potta One',
+        'Stick',
+        'Train One'
       ],
       presets: [
         {

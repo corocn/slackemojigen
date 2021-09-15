@@ -29,18 +29,21 @@ module.exports = {
     timeout: 30000,
     google: {
       families: [
-        'M+PLUS+1p:100,300,400,500,700,800,900',
         'M+PLUS+Rounded+1c:100,300,400,500,700,800,900',
         'Noto+Sans+JP:100,300,400,500,700,900',
-        'Noto+Sans+SC:100,300,400,500,700,900',
-        'Noto+Sans+TC:100,300,400,500,700,900',
         'Noto+Serif+JP:200,300,400,500,600,700,900',
-        'Noto+Serif+SC:200,300,400,500,600,700,900',
-        'Noto+Serif+TC:200,300,400,500,600,700,900',
-        'Kosugi',
         'Kosugi+Maru',
         'Sawarabi+Gothic',
         'Sawarabi+Mincho',
+        'RocknRoll+One',
+        'Dela+Gothic+One',
+        'Rampart+One',
+        'Reggae+One',
+        'DotGothic16',
+        'Hachi+Maru+Pop',
+        'Potta+One',
+        'Stick',
+        'Train+One'
       ]
     }
   },
