@@ -26,7 +26,7 @@
     "nuxt": "^2.8.1",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-webfontloader": "^1.0.0",
-    "terser": "^3.14.1",
+    "terser": "^4.8.1",
     "tinycolor2": "^1.4.1",
     "vue-color": "^2.7.0",
     "vue-property-decorator": "^7.3.0"
